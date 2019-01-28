@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell
+    x:Name="theShell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  x:Class="FormsShellDemoApp.TabsShell"
+  xmlns:local="clr-namespace:FormsShellDemoApp;assembly=FormsShellDemoApp"
+  xmlns:vm="clr-namespace:FormsShellDemoApp;assembly=FormsShellDemoApp"
+    Navigating="Handle_Navigating"
+    Route="home"
+  RouteHost="www.alejandroruizvarela.com"
+  RouteScheme="app">
+    <Shell.BindingContext>
+        <vm:TabsShellViewModel />
+    </Shell.BindingContext>
+    <Shell.MenuItems>
+        <MenuItem BindingContext="{x:Reference theShell}" Text="Go To Page 1" CommandParameter="COMMAND1" Command="{Binding BindingContext.NavigateCommand}" />
+    </Shell.MenuItems>
+     <ShellItem Route="tabs" FlyoutIcon="dashboard"  Title="Home">
+        <ShellSection Icon="news" Title="News">
+            <ShellContent Title="Technology">
+                <local:HomePage Title="Technology" />
+            </ShellContent>
+             <ShellContent Title="Sports">
+                <local:HomePage Title="Sports" />
+            </ShellContent>
+        </ShellSection>
+        <ShellSection Route="favorites" Icon="favorites" Title="Favorites">
+            <ShellContent Route="myfavorites">
+                <local:HomePage Title="My Favorites" />
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
+</Shell>

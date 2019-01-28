@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:FormsShellDemoApp"
+       x:Class="FormsShellDemoApp.MainShell"
+       FlyoutHeaderBehavior="CollapseOnScroll"
+       Title="Demo App">
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <ContentView HeightRequest="200" BackgroundColor="Teal">
+                <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="White" Text="AMAZING SHELL APP" />
+            </ContentView>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+    <Shell.MenuItems>
+        <MenuItem Command="{Binding ProductTypeCommand}"
+                  CommandParameter="1"
+                  Text="Item 1" />
+        <MenuItem Command="{Binding ProductTypeCommand}"
+                  CommandParameter="2"
+                  Text="Item 2" />
+    </Shell.MenuItems>
+    <ShellItem FlyoutIcon="3bar"  Title="Home">
+        <ShellSection Title="Home Page">
+            <ShellContent Title="Home Page" >
+                <local:HomePage />
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
+    <ShellContent Title="Settings" ContentTemplate="{DataTemplate local:HomePage}" />
+</Shell>
