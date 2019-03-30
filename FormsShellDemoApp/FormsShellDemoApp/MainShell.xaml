@@ -7,9 +7,10 @@
        Title="Demo App">
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
-            <ContentView HeightRequest="200" BackgroundColor="Teal">
-                <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="White" Text="AMAZING SHELL APP" />
-            </ContentView>
+            <Grid HeightRequest="200">
+                <Image Source="mty.jpg" Aspect="AspectFill" />
+                <Image Source="userimg.png" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="60" WidthRequest="60" />
+            </Grid>
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
     <Shell.MenuItems>
@@ -20,7 +21,7 @@
                   CommandParameter="2"
                   Text="Item 2" />
     </Shell.MenuItems>
-    <ShellItem FlyoutIcon="3bar"  Title="Home">
+    <ShellItem FlyoutIcon="bars"  Title="Home">
         <ShellSection Title="Home Page">
             <ShellContent Title="Home Page" >
                 <local:HomePage />

@@ -94,6 +94,13 @@
     <AndroidResource Include="Resources\drawable-xhdpi\news.png" />
     <AndroidResource Include="Resources\drawable\news.png" />
     <AndroidResource Include="Resources\drawable-hdpi\news.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\bars.png" />
+    <AndroidResource Include="Resources\drawable\bars.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\bars.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\bars.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\bars.png" />
+    <AndroidResource Include="Resources\drawable\mty.jpg" />
+    <AndroidResource Include="Resources\drawable\userimg.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
@@ -110,7 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms">
-      <Version>4.0.0.94569-pre3</Version>
+      <Version>4.0.0.250467-pre7</Version>
     </PackageReference>
     <PackageReference Include="SkiaSharp.Views.Forms">
       <Version>1.68.0</Version>
